@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddPartsFormController">
+   <children>
+      <RadioButton fx:id="inHouse" layoutX="203.0" layoutY="82.0" mnemonicParsing="false" onAction="#OnActionAddInHouseRadio" selected="true" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="inoutTG" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="outSourced" layoutX="356.0" layoutY="82.0" mnemonicParsing="false" onAction="#OnActionAddOutsourcedRadio" text="Outsourced" toggleGroup="$inoutTG" />
+      <TextField fx:id="IDPartsField" disable="true" layoutX="129.0" layoutY="141.0" promptText="Auto-Gen - Disabled" />
+      <TextField fx:id="NamePartsField" layoutX="129.0" layoutY="182.0" />
+      <TextField fx:id="InvPartsField" layoutX="129.0" layoutY="224.0" />
+      <TextField fx:id="PriceCostPartsField" layoutX="129.0" layoutY="267.0" />
+      <TextField fx:id="MaxPartsField" layoutX="129.0" layoutY="308.0" />
+      <TextField fx:id="MachineIDPartsField" layoutX="129.0" layoutY="350.0" />
+      <TextField fx:id="MinPartsField" layoutX="369.0" layoutY="308.0" />
+      <Label layoutX="60.0" layoutY="141.0" prefHeight="25.0" prefWidth="17.0" text="ID" />
+      <Label layoutX="60.0" layoutY="186.0" text="Name" />
+      <Label layoutX="60.0" layoutY="228.0" text="Inv" />
+      <Label layoutX="60.0" layoutY="271.0" text="Price/Cost" />
+      <Label layoutX="61.0" layoutY="312.0" text="Max" />
+      <Label layoutX="311.0" layoutY="312.0" text="Min" />
+      <Label fx:id="machineLabel" layoutX="38.0" layoutY="354.0" text="Machine ID" />
+      <Label layoutX="70.0" layoutY="74.0" text="Add Part">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="285.0" layoutY="455.0" mnemonicParsing="false" onAction="#OnActionSaveAddParts" prefHeight="25.0" prefWidth="46.0" text="Save" />
+      <Button layoutX="356.0" layoutY="455.0" mnemonicParsing="false" onAction="#OnActionCancelAddParts" text="Cancel" />
+   </children>
+</AnchorPane>
